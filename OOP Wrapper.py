@@ -7,11 +7,7 @@ class Person:
     def display(self):
         print("Name:", self.name)
         print("Age:", self.age)
-
-
-
 class Employee(Person):
-
     def __init__(self, name=None, age=None,
                  employee_id=None, salary=0):
 
@@ -19,19 +15,13 @@ class Employee(Person):
 
         self.__employee_id = employee_id
         self.__salary = salary
-
-
-    def get_employee_id(self):
+def get_employee_id(self):
         return self.__employee_id
-
-  
-    def set_employee_id(self, employee_id):
+ def set_employee_id(self, employee_id):
         self.__employee_id = employee_id
-
-    def get_salary(self):
+ def get_salary(self):
         return self.__salary
-
-    def set_salary(self, salary):
+ def set_salary(self, salary):
         self.__salary = salary
 
     def display(self):
@@ -43,35 +33,26 @@ class Employee(Person):
 
     def __del__(self):
         pass
-
-
-
 class Manager(Employee):
-
-    def __init__(self, name=None, age=None,
+  def __init__(self, name=None, age=None,
                  employee_id=None, salary=0,
                  department=None):
 
         super().__init__(name, age, employee_id, salary)
         self.department = department
-
-  
-    def display(self):
+  def display(self):
         super().display()
         print("Department:", self.department)
 
-
-
 class Developer(Employee):
-
-    def __init__(self, name=None, age=None,
+ def __init__(self, name=None, age=None,
                  employee_id=None, salary=0,
                  programming_language=None):
 
         super().__init__(name, age, employee_id, salary)
         self.programming_language = programming_language
 
-    def display(self):
+def display(self):
         super().display()
         print("Programming Language:",
               self.programming_language)
@@ -128,9 +109,7 @@ while True:
         salary = float(input("Enter Salary: "))
         department = input("Enter Department: ")
 
-        manager = Manager(
-            name, age, emp_id, salary, department
-        )
+        manager = Manager(name, age, emp_id, salary, department)
 
         managers.append(manager)
 
